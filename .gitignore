@@ -1,0 +1,6 @@
+/arm-trusted-firmware/
+/u-boot/
+/gcc-linaro-*/
+/tmp/
+/sunxi-tools/
+/bootloaders/
