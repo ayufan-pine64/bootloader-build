@@ -1,5 +1,5 @@
 u-boot:
-	git clone https://github.com/linux-sunxi/u-boot $@ --single-branch --depth=30
+	git clone https://github.com/ayufan-pine64/u-boot-sunxi $@ --single-branch --depth=30
 
 .PHONY: u-boot-menuconfig
 u-boot-menuconfig: u-boot
