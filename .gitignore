@@ -4,3 +4,5 @@
 /tmp/
 /sunxi-tools/
 /bootloaders/
+/*.img
+/*.img.xz

@@ -8,6 +8,7 @@ include Makefile.atf.mk
 include Makefile.uboot.mk
 include Makefile.tools.mk
 include Makefile.sopine.mk
+include Makefile.blobs.mk
 
 bootloaders:
 	mkdir -p $@
@@ -21,4 +22,6 @@ bootloaders/sopine_baseboard-uboot.bin: tmp/u-boot-sopine_baseboard/u-boot-with-
 .PHONY: image-bootloaders
 image-bootloaders: \
 	bootloaders/pine64_plus-uboot.bin \
-	bootloaders/sopine_baseboard-uboot.bin
+	bootloaders/sopine_baseboard-uboot.bin \
+	u-boot-sopine-flash-spi.img.xz \
+	u-boot-sopine-erase-spi.img.xz \
