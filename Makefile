@@ -25,3 +25,9 @@ image-bootloaders: \
 	bootloaders/sopine_baseboard-uboot.bin \
 	u-boot-sopine-flash-spi.img.xz \
 	u-boot-sopine-erase-spi.img.xz \
+
+.PHONY: versions
+versions:
+	@echo "u-boot: $$(git -C u-boot describe --always)"
+	@echo "arm-trusted-firmware: $$(git -C arm-trusted-firmware describe --always)"
+	@echo "sunxi-tools: $$(git -C sunxi-tools describe --always)"
