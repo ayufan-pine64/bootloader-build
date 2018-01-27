@@ -25,6 +25,8 @@ image-bootloaders: \
 	bootloaders/sopine_baseboard-uboot.bin \
 	u-boot-sopine-flash-spi.img.xz \
 	u-boot-sopine-erase-spi.img.xz \
+	u-boot-pine64_plus-boot.img.xz \
+	u-boot-sopine_baseboard-boot.img.xz
 
 .PHONY: versions
 versions:

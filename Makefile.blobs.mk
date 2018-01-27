@@ -15,3 +15,8 @@ u-boot-sopine-%.img: tmp/u-boot-sopine_baseboard/u-boot-with-spl.bin tmp/u-boot/
 	parted -s $@.tmp set 1 boot on
 	dd if=$(word 1,$^) of=$@.tmp seek=16 conv=notrunc status=none
 	mv "$@.tmp" $@
+
+u-boot-%-boot.img: tmp/u-boot-%/u-boot-with-spl.bin
+	rm -f $@.tmp
+	dd if=$(word 1,$^) of=$@.tmp seek=16 conv=notrunc status=none
+	mv "$@.tmp" $@
